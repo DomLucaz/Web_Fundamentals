@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Assets/img/css/style.css">
+    <link rel="stylesheet" href="Assets/css/style.css">
 </head>
 <body>
     
@@ -24,30 +24,30 @@
         <div>
             <form action="">
                 <label for="nome">Nome:</label> <br>
-                <input type="text" id="nome">
-                <br>
+                <input type="text" id="nome" onkeyup='validaNome()'>
+                <div id='txtNome'></div>
                 <br>
                 <label for="email">E-mail:</label> <br>
-                <input type="email" id="email">
-                <br>
+                <input type="email" id="email" onkeyup='validaEmail()'>
+                <div id='txtEmail'></div>
                 <br>
                 <label for="assunto">Assunto:</label> <br>
-                <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
+                <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+                <div id='txtAssunto'></div>
                 <br>
-                <br>
-                <button>Enviar</button>
+                <button onclick="enviar()">Enviar</button>
             </form>
-        </div>
-
+        </div> 
         <div class="ml-50">
             <p>Av. Brg. Faria Lima, 1336 - Jardim Paulistano</p>
             <p>São Paulo - SP</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9634968516366!2d-46.69428098535559!3d-23.569754467786595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a60f8a7ef1%3A0x9273a3cb79b9934d!2sAv.%20Brg.%20Faria%20Lima%2C%201336%20-%20Jardim%20Paulistano%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001451-001!5e0!3m2!1sen!2sbr!4v1637768263698!5m2!1sen!2sbr" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9634968516366!2d-46.69428098535559!3d-23.569754467786595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a60f8a7ef1%3A0x9273a3cb79b9934d!2sAv.%20Brg.%20Faria%20Lima%2C%201336%20-%20Jardim%20Paulistano%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001451-001!5e0!3m2!1sen!2sbr!4v1637768263698!5m2!1sen!2sbr" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" onmousemove="mapaZoom()"   onmouseout="mapaNormal()" id="mapa"></iframe>
         </div>
     </div>
+    </div>
+    
     <hr>
     <footer>
-            
         <div class="container">
             <a href="https://github.com/DomLucaz" target="_blank">
             <img class="tm-social p-30" src= "Assets/img/github.png" alt="Logo do github">
@@ -62,11 +62,10 @@
             <img class="tm-social p-30" src= "Assets/img/twitter.png" alt="Logo do twitter">
             </a>
         </div>
-
         <p class="center">
             Todos os direitos reservados: Lucas Figueiredo &copy
         </p>  
-
     </footer>
+    <script src="Assets/JS/script.js"></script>
 </body>
 </html>
